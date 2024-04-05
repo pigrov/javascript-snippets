@@ -31,6 +31,15 @@ Inside the `countdown` function, it initializes a `count` variable with the `sta
 
 Similarly, the `countup` function works in a similar way but counts up from the `start` value to an `end` value calculated by adding the `difference`. It increments the `count` value, updates the `element`, and clears the timer and calls the `callback` function when the count reaches the `end` value.
 
+## [datetime.js](https://github.com/pigrov/javascript-snippets/blob/main/datetime.js)
+This snippet of code defines three functions: `datetime`, `time`, and `date`. 
+
+1. The `datetime` function takes an optional parameter `x`, which represents a date. If `x` is provided, it uses that date; otherwise, it generates the current date. It then formats the date in the format `DD/MM/YY HH:MM`.
+2. The `time` function also takes an optional parameter `x`, processes it similarly to `datetime`, and returns only the time part in the format `HH:MM`.
+3. The `date` function, like the others, takes an optional parameter `x`, processes it, and returns only the date part in the format `DD/MM/YY`. 
+
+These functions are designed to handle date and time formatting in JavaScript.
+
 
 ## [focusend.js](https://github.com/pigrov/javascript-snippets/blob/main/focusend.js)
 This JavaScript snippet defines a function called `focusend` that takes an `element` as a parameter. Inside the function, there is a `setTimeout` function with a delay of 0 milliseconds, which means it will be executed asynchronously as soon as possible. 
