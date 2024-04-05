@@ -1,9 +1,7 @@
-1. pasteCleanText.js - when copying, the text inserts the formatted text into the edited div.
-2. debounce.js - function is designed to set the delay for the execution of another function.
-3. cookie.js -  function is designed to work with cookies
+### Collection of snippets
 
-
-
+> [!NOTE]
+> Welcome to my collection of snippets. I always keep this collection handy and regularly update it.
 
 ## [cookie.js](https://github.com/pigrov/javascript-snippets/blob/main/cookie.js)
 This code snippet contains three functions related to handling cookies in JavaScript:
@@ -14,6 +12,24 @@ This code snippet contains three functions related to handling cookies in JavaSc
 
 These functions provide basic cookie handling functionality in JavaScript for storing, retrieving, and deleting cookies.
 
+
+## [copyImage.js](https://github.com/pigrov/javascript-snippets/blob/main/copyImage.js)
+This code snippet consists of two functions: `imageToBlob` and `copyImage`. 
+
+1. The `imageToBlob` function takes an `imageURL` as a parameter, creates an image element, a canvas element, and a 2D drawing context. It sets the cross-origin attribute of the image to an empty string, assigns the image URL to the image element, and then creates a promise that resolves when the image is loaded. Once the image is loaded, it sets the canvas dimensions to match the image's natural dimensions, draws the image on the canvas, converts the canvas content to a Blob object, and resolves the promise with the resulting blob.
+2. The `copyImage` function is an async function that takes an `imageURL` as a parameter. It awaits the result of calling `imageToBlob` with the `imageURL`, then creates a `ClipboardItem` object with the blob and a MIME type of 'image/png'. Finally, it writes the clipboard with the created `ClipboardItem` using `navigator.clipboard.write`.
+
+Overall, these functions work together to convert an image from a URL to a Blob object and then copy that Blob to the clipboard.
+
+
+## [countdown.js](https://github.com/pigrov/javascript-snippets/blob/main/countdown.js)
+This snippet contains two functions: `countdown` and `countup`. 
+
+The `countdown` function takes in parameters `start` (initial value), `difference` (amount to count down by), `duration` (total duration of the countdown in seconds), `element` (HTML element to update with the countdown value), and `callback` (optional function to call when the countdown is complete). 
+
+Inside the `countdown` function, it initializes a `count` variable with the `start` value, calculates the `end` value by subtracting the `difference` from `start`, and determines the `interval` for updating the countdown value. It then sets up a timer using `setInterval` to decrement the `count` value, update the `element` with the new value, and check if the countdown has reached the `end` value to clear the timer and call the `callback` function if provided.
+
+Similarly, the `countup` function works in a similar way but counts up from the `start` value to an `end` value calculated by adding the `difference`. It increments the `count` value, updates the `element`, and clears the timer and calls the `callback` function when the count reaches the `end` value.
 
 
 ## [focusend.js](https://github.com/pigrov/javascript-snippets/blob/main/focusend.js)
